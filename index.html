@@ -32,9 +32,26 @@
        }
 
        h1 {
-           font-size: 24px; /* Adjust font size as needed */
+           font-size: 28px; /* Adjust font size as needed */
            text-align: left; /* Align the text to the left */
            margin: 0; /* Remove default margin */
+       }
+
+       .about-content {
+           display: flex;
+           flex-direction: row; /* Arrange content in a row */
+           justify-content: space-between; /* Distribute space between elements */
+           align-items: center; /* Align items vertically */
+       }
+       
+       .about-text {
+           flex: 1; /* Allow text to take up remaining space */
+           padding-right: 20px; /* Add spacing between text and photo */
+       }
+       
+       .about-photo img {
+           width: 100px; /* Adjust width as needed */
+           height: auto; /* Maintain aspect ratio */
        }
 
        nav ul {
@@ -83,10 +100,17 @@
         </header>
 
         <section id="about">
-            <h2>About</h2>
-            <p>I am an atmospheric scientist and global climate modeler dedicated to researching the impacts of aerosols and clouds on climate, currently a postdoc in Prof. Lorenzo Polvani's group at Columbia University as well as at the NASA Goddard Institute for Space Studies.</p>
-
-            <a href="zmcgraw-cv-30dec2023.pdf">Download CV</a>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About</h2>
+                    <p>I am an atmospheric scientist and global climate modeler, dedicated to researching the role of aerosols and clouds in the global climate system. Currently I am a postdoc in Prof. Lorenzo Polvani's group at Columbia University as well as at the NASA Goddard Institute for Space Studies.</p>
+        
+                    <a href="zmcgraw-cv-30dec2023.pdf">Download CV</a>
+                </div>
+                <div class="about-photo">
+                    <img src="zmcgraw_photo_iceland.jpeg" alt="photo">
+                </div>
+            </div>
         </section>
 
         <section id="research">
