@@ -22,6 +22,7 @@
            background-color: #fff; /* White background for the container */
            padding: 20px; /* Add padding to separate content from edges */
            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a slight shadow for depth */
+           overflow: hidden; /* Clear floats */
        }
        
        header {
@@ -37,15 +38,9 @@
            font-size: 30px; /* Adjust the value as needed */
        }
 
-       .about-content {
-           display: flex;
-           flex-wrap: wrap; /* Allow flex items to wrap */
-       }
-       
        .about-text {
-           flex: 1; /* Allow text to take up remaining space */
+           float: left; /* Float the text to the left */
            padding-right: 20px; /* Add spacing between text and photo */
-           overflow: visible;
        }
        
        .about-photo img {
@@ -100,17 +95,15 @@
         </header>
 
         <section id="about">
-            <div class="about-content">
-                <h2>About</h2>
-                <div class="about-photo">
-                    <img src="zmcgraw_photo_glacier.jpeg" alt="photo">
-                </div>
-                <div class="about-text">
-                    <p>I am an atmospheric scientist and global climate modeler, dedicated to improving our understanding of the role aerosols and clouds play in Earth's climate system.</p>
-                    <p>The complex microscopic processes controlling aerosol and cloud development are the main obstacle to simple constraints on global climate change. In addition to being a major impediment to accurate climate prediction, these processes are also crucial for understanding aerosol-driven climate shifts, including those caused by pollution and volcanic eruptions.</p>
-                    <p>Currently I am a postdoc in Prof. Lorenzo Polvani's group at Columbia University as well as at the NASA Goddard Institute for Space Studies, both in New York City.</p>
-                    <a href="zmcgraw-cv-30dec2023.pdf">Download CV</a>
-                </div>
+            <h2>About</h2>
+            <div class="about-photo">
+                <img src="zmcgraw_photo_glacier.jpeg" alt="photo">
+            </div>
+            <div class="about-text">
+                <p>I am an atmospheric scientist and global climate modeler, dedicated to improving our understanding of the role aerosols and clouds play in Earth's climate system.</p>
+                <p>The complex microscopic processes controlling aerosol and cloud development are the main obstacle to simple constraints on global climate change. In addition to being a major impediment to accurate climate prediction, these processes are also crucial for understanding aerosol-driven climate shifts, including those caused by pollution and volcanic eruptions.</p>
+                <p>Currently I am a postdoc in Prof. Lorenzo Polvani's group at Columbia University as well as at the NASA Goddard Institute for Space Studies, both in New York City.</p>
+                <a href="zmcgraw-cv-30dec2023.pdf">Download CV</a>
             </div>
         </section>
 
