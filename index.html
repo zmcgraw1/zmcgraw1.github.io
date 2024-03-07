@@ -31,17 +31,6 @@
            text-align: center;
        }
 
-       .header {
-           display: flex;
-           justify-content: center;
-           align-items: flex-start; /* Align items at the start of the cross axis (vertically) */
-           flex-direction: column; /* Stack items vertically */
-       }
-       
-       .header h1:first-child {
-           align-self: flex-start; /* Align the first h1 element to the start of the cross axis */
-       }
-       
        nav ul {
            list-style-type: none;
            padding: 0;
@@ -76,10 +65,7 @@
 <body>
     <div class="container">
         <header>
-            <div class="header">
-                <h1>Dr. Zachary McGraw | </h1>
-                <h1>Aerosols, Clouds, and Climate</h1>
-            </div>
+            <h2>Dr. Zachary McGraw | Aerosols, Clouds, and Climate</h2>
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
