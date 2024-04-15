@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Wait for the DOM content to be fully loaded
-
-    // Select the thumbnail and full-image container
     const thumbnail = document.querySelector('.thumbnail');
     const fullImageContainer = document.querySelector('.full-image');
 
@@ -9,12 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (thumbnail && fullImageContainer) {
         // Add click event listener to thumbnail
         thumbnail.addEventListener('click', function() {
+            // Toggle the "show" class on full-image container
             fullImageContainer.classList.toggle('show');
         });
-
-        // Add click event listener to full-image for closing
+        
+        // Add click event listener to full-image container for closing
         fullImageContainer.addEventListener('click', function(event) {
             if (event.target.classList.contains('close')) {
+                // If the close button is clicked, hide the full-image container
                 fullImageContainer.classList.remove('show');
             }
         });
