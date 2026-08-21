@@ -1,0 +1,16 @@
+{
+  "name": "zmcgraw1.github.io",
+  "terminals": [
+    {
+      "name": "static-server",
+      "command": "python3 -m http.server 8000",
+      "description": "Serves the static site at http://localhost:8000 (mirrors GitHub Pages)."
+    }
+  ],
+  "ports": [
+    {
+      "name": "web server",
+      "port": 8000
+    }
+  ]
+}
