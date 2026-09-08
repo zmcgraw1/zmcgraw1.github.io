@@ -1,24 +1,42 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const thumbnail = document.querySelector('.thumbnail');
-    const fullImageContainer = document.querySelector('.full-image');
+document.addEventListener('DOMContentLoaded', () => {
+  const lightbox = document.querySelector('.lightbox');
+  const lightboxImage = lightbox.querySelector('img');
+  const closeButton = lightbox.querySelector('.lightbox-close');
+  const thumbnails = document.querySelectorAll('.thumbnail');
+  let lastFocusedElement;
 
-    // Check if thumbnail and full-image container exist
-    if (thumbnail && fullImageContainer) {
-        // Add click event listener to thumbnail
-        thumbnail.addEventListener('click', function() {
-            // Toggle the "show" class on full-image container
-            fullImageContainer.classList.toggle('show');
-        });
-        
-        // Add click event listener to full-image container for closing
-        fullImageContainer.addEventListener('click', function(event) {
-            if (event.target.classList.contains('close')) {
-                // If the close button is clicked, hide the full-image container
-                fullImageContainer.classList.remove('show');
-            }
-        });
-    } else {
-        console.error('Thumbnail or full-image container not found.');
+  const closeLightbox = () => {
+    lightbox.hidden = true;
+    lightboxImage.src = '';
+    document.body.style.overflow = '';
+    if (lastFocusedElement) {
+      lastFocusedElement.focus();
     }
+  };
+
+  thumbnails.forEach((thumbnail) => {
+    thumbnail.addEventListener('click', () => {
+      lastFocusedElement = thumbnail;
+      lightboxImage.src = thumbnail.dataset.fullImage || thumbnail.src;
+      lightboxImage.alt = thumbnail.alt;
+      lightbox.hidden = false;
+      document.body.style.overflow = 'hidden';
+      closeButton.focus();
+    });
+  });
+
+  closeButton.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (lightbox.hidden) return;
+    if (event.key === 'Escape') {
+      closeLightbox();
+    }
+  });
 });
 
