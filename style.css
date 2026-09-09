@@ -64,7 +64,7 @@ nav a:hover, .text-link:hover, .research-card a:hover, .publication a:hover, .pr
 .research-card a, .text-link { color: var(--mint-dark); font-size: .86rem; font-weight: 600; }
 .feature { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: center; }
 .feature-reverse { background: var(--paper); }
-.feature-volcano { grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr); }
+.feature-volcano { grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr); }
 .feature-image img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 .feature-volcano-image { display: block; overflow: visible; background: transparent; }
 .feature-volcano-image img { width: 100%; height: auto; aspect-ratio: auto; object-fit: initial; }
